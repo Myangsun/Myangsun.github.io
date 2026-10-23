@@ -4,7 +4,7 @@
 
 本次视觉调整的设计思路、CSS 和交互实现说明见 [DESIGN_NOTES.md](./DESIGN_NOTES.md)。
 
-正式域名：[www.myangsun.com](https://www.myangsun.com/)。源码仓库：[Myangsun/Myangsun.github.io](https://github.com/Myangsun/Myangsun.github.io)。网站由 GitHub Pages 托管，域名和 DNS 继续由 Squarespace 管理。
+正式域名：[myangsun.com](https://myangsun.com/)。源码仓库：[Myangsun/Myangsun.github.io](https://github.com/Myangsun/Myangsun.github.io)。网站由 GitHub Pages 托管，域名和 DNS 继续由 Squarespace 管理。
 
 ## 本地预览
 
@@ -75,9 +75,9 @@ draft: false
 3. 在仓库 Settings → Pages 中，把 Source 设为 **GitHub Actions**。
 4. 在 Actions 页面运行 **Deploy website to GitHub Pages**，或推送新提交。工作流会读取 GitHub 实际提供的站点地址和路径，然后自动构建和发布。
 
-发布配置在 `.github/workflows/deploy.yml`。源码默认使用 `www.myangsun.com` 生成本地构建的 canonical 链接；GitHub Actions 会自动改用实际 Pages 地址，避免预览阶段把 canonical 指向旧站。
+发布配置在 `.github/workflows/deploy.yml`。源码默认使用 `https://myangsun.com` 生成本地构建的 canonical 链接；GitHub Actions 会读取实际 Pages 地址，并统一使用 HTTPS。
 
-`www.myangsun.com` 已配置为 Pages 的 Custom domain。Squarespace 中的 `www` CNAME 指向 `myangsun.github.io`，根域名的四条 A 记录指向 GitHub Pages。根域名会跳转到 `www` 地址。HTTPS 证书由 GitHub 自动签发。
+`myangsun.com` 已配置为 Pages 的 Custom domain。Squarespace 中的 `www` CNAME 指向 `myangsun.github.io`，根域名的四条 A 记录指向 GitHub Pages。`www` 会跳转到不带 `www` 的主站地址。HTTPS 证书由 GitHub 自动签发，两个地址的 HTTPS 可用性取决于证书是否覆盖相应域名。
 
 以后修改内容并推送到此仓库的 `main` 分支，GitHub Actions 会自动重新构建和发布。域名切换前的记录及新记录保存在本地、未提交的 `artifacts/domain-migration.json`；需要回退时，可在 Squarespace 恢复 Squarespace Defaults 预设。原 Squarespace 网站内容没有删除。
 
