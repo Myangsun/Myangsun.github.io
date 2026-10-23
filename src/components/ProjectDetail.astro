@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { url } from '../lib/site';
+interface Block { type: string; html?: string; src?: string; alt?: string; caption?: string; width?: number; height?: number; title?: string; href?: string; label?: string; }
+interface Project {
+  title: string; slug: string; category: string; summary: string; blocks: Block[];
+  researchQuestion?: string; contribution?: string; method?: string; results?: string;
+  codeUrl?: string; demoUrl?: string;
+}
+interface Props { project: Project; next?: Project; }
+const { project, next } = Astro.props;
+const active = project.category === 'projects' ? 'Projects' : 'Design';
+const structured = [['Research question', project.researchQuestion], ['My contribution', project.contribution], ['Method', project.method], ['Results', project.results]].filter(([, value]) => value);
+---
+<Layout title={project.title} active={active} description={project.summary || project.title}>
+  <article class="project-detail">
+    <header class="detail-header">
+      <div><a class="text-link" href={url(`${project.category}/`)}>{active}</a><h1>{project.title}</h1></div>
+      <div><p>{project.summary}</p>
+        {project.codeUrl && <p><a class="text-link" href={project.codeUrl} target="_blank" rel="noopener noreferrer">Code</a></p>}
+        {project.demoUrl && <p><a class="text-link" href={project.demoUrl} target="_blank" rel="noopener noreferrer">Demo</a></p>}
+      </div>
+    </header>
+    {structured.map(([heading, text]) => <section class="detail-text"><h2>{heading}</h2><p>{text}</p></section>)}
+    <div class="detail-blocks">
+      {project.blocks.map(block => block.type === 'text'
+        ? <div class="detail-text" set:html={block.html} />
+        : block.type === 'image'
+          ? <figure class="detail-image"><img src={url(block.src || '')} alt={block.alt || project.title} width={block.width} height={block.height} loading="lazy" decoding="async" />{block.caption && <figcaption>{block.caption}</figcaption>}</figure>
+          : block.type === 'embed'
+            ? <div class="embed-wrap"><iframe src={block.src} title={block.title} loading="lazy" allow="fullscreen" allowfullscreen /></div>
+            : <a class="detail-link" href={block.href} target="_blank" rel="noopener noreferrer">{block.label}</a>
+      )}
+    </div>
+    <nav class="detail-next" aria-label="More work">
+      <a href={url(`${project.category}/`)}>All {active.toLowerCase()}</a>
+      {next && <a href={url(`${next.category}/${next.slug}/`)}>{next.title}</a>}
+    </nav>
+  </article>
+</Layout>

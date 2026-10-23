@@ -1,0 +1,10 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArticleList from '../../components/ArticleList.astro';
+import { publishedWriting } from '../../lib/writing';
+const posts = await publishedWriting();
+---
+<Layout title="Writing" active="Writing">
+  <section class="page-intro"><h1>Writing<span class="page-count" aria-label={`${posts.length} articles`}>({String(posts.length).padStart(2, '0')})</span></h1><p>Technical essays, paper notes, experiments, and lessons from building AI systems.</p></section>
+  {posts.length > 0 ? <ArticleList posts={posts} /> : <section class="writing-empty"><h2>Essays coming soon.</h2><p>I'll share research notes and engineering experiences here.</p></section>}
+</Layout>

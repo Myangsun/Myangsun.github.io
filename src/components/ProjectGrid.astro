@@ -1,0 +1,18 @@
+---
+import { url } from '../lib/site';
+interface Project { title: string; slug: string; category: string; cover: string; }
+interface Props { projects: Project[]; }
+const { projects } = Astro.props;
+---
+<div class="project-grid collection-grid">
+  {projects.map((project, index) => (
+    <a class="project-card" href={url(`${project.category}/${project.slug}/`)} aria-label={`View ${project.title}`}>
+      <figure data-reveal>
+        <div class="project-image">
+        <img src={url(project.cover)} alt={project.title} width="1000" height="667" loading={index < 3 ? 'eager' : 'lazy'} decoding="async" />
+        </div>
+        <figcaption><span class="project-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><span class="project-name">{project.title}</span></figcaption>
+      </figure>
+    </a>
+  ))}
+</div>

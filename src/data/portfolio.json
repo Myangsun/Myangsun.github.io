@@ -1,0 +1,944 @@
+[
+  {
+    "title": "Urban Fusion",
+    "slug": "urban-fusion",
+    "category": "projects",
+    "originalPath": "/ai-more/urban-fusion",
+    "sourceUrl": "https://www.myangsun.com/ai-more/urban-fusion",
+    "cover": "/assets/urban-fusion-cover.jpg",
+    "summary": "A Multi-Constraint Site Selection Framework with LLM-Driven Spatial Reasoning",
+    "blocks": [
+      {
+        "type": "image",
+        "src": "/assets/urban-fusion-0.jpeg",
+        "alt": "The training and validation loss of when using 4o-mini and 100 samples",
+        "caption": "The training and validation loss of when using 4o-mini and 100 samples",
+        "width": 1501,
+        "height": 846
+      },
+      {
+        "type": "text",
+        "html": "<p><a href=\"https://github.com/Myangsun/Urban_Fusion/tree/main\" rel=\"noopener noreferrer\">Github Link</a></p>"
+      },
+      {
+        "type": "text",
+        "html": "<p>Urban site selection is a complex task requiring the integration of diverse data sources and the satisfaction of multiple competing constraints, which traditionally relies on tedious GIS processing and domain expertise. This paper introduces Urban Fusion, an LLM-driven agent framework that translates natural language site selection queries into executable Python code for constraint-based spatial analysis. The framework enables users to specify complex combinations of geospatial, economic, demographic, and operational constraints when searching for optimal commercial locations. </p>\n<p>The approach is evaluated on a dataset of Cambridge, MA parcels with over 120 site selection scenarios across varying complexity levels. Through comprehensive testing of multiple methodologies, it was found that finetuned models with chain-of-thought prompting and retrieval-augmented generation significantly outperform zero-shot and few-shot approaches, achieving a 50% success rate and 61.47% F1 score for constraint satisfaction. Error analysis reveals key challenges in spatial code generation, including schema understanding, domain-specific knowledge integration, and geospatial operation implementation. Urban Fusion demonstrates a promising approach to automating multi-constraint site selection, with implications for urban planning, commercial development, and location intelligence applications. </p>"
+      },
+      {
+        "type": "image",
+        "src": "/assets/urban-fusion-1.png",
+        "alt": "Urban Fusion",
+        "width": 1058,
+        "height": 1122
+      },
+      {
+        "type": "image",
+        "src": "/assets/urban-fusion-2.png",
+        "alt": "Urban Fusion",
+        "width": 1440,
+        "height": 1386
+      },
+      {
+        "type": "image",
+        "src": "/assets/urban-fusion-3.jpeg",
+        "alt": "The training and validation loss of when using 4o-mini and 100 samples",
+        "caption": "The training and validation loss of when using 4o-mini and 100 samples",
+        "width": 1000,
+        "height": 600
+      },
+      {
+        "type": "image",
+        "src": "/assets/urban-fusion-4.jpeg",
+        "alt": "4o-mini,100 samples, CoT Prompting",
+        "caption": "4o-mini,100 samples, CoT Prompting",
+        "width": 1000,
+        "height": 600
+      },
+      {
+        "type": "image",
+        "src": "/assets/urban-fusion-5.jpeg",
+        "alt": "4o, 100 samples",
+        "caption": "4o, 100 samples",
+        "width": 1000,
+        "height": 600
+      }
+    ]
+  },
+  {
+    "title": "Date Sync",
+    "slug": "multimodal-inferface",
+    "category": "projects",
+    "originalPath": "/ai-more/multimodal-inferface",
+    "sourceUrl": "https://www.myangsun.com/ai-more/multimodal-inferface",
+    "cover": "/assets/multimodal-inferface-cover.png",
+    "summary": "A Multimodal System for Emotion-Aware Dating Insights",
+    "blocks": [
+      {
+        "type": "image",
+        "src": "/assets/multimodal-inferface-0.png",
+        "alt": "Date Sync",
+        "width": 1689,
+        "height": 771
+      },
+      {
+        "type": "text",
+        "html": "<p><a href=\"https://www.youtube.com/watch?v=gNEGv2U7JqQ&amp;t=17s\" rel=\"noopener noreferrer\">Video</a><br><a href=\"https://github.com/Myangsun/Date_Sync\" rel=\"noopener noreferrer\">Github Link</a></p>"
+      },
+      {
+        "type": "text",
+        "html": "<p>DateSync is a multimodal emotional analysis system designed to help users better understand how emotions are expressed, perceived, and interpreted during dating interactions. The system synthesizes visual, audio, and textual emotional cues to generate a compatibility score, offering insights into the emotional alignment between two participants. By analyzing facial expressions, vocal tone, and speech content, DateSync provides actionable feedback to improve communication and enhance dating experiences. The system achieves good accuracy in detecting three key emotional indicators: emotional valence, comfort level, and engagement level, as validated through user testing with dating pairs. </p>\n<p>This project demonstrates how multimodal analysis can create more meaningful insights into interpersonal dynamics than single-modality approaches. Despite promising results, challenges related to cross-cultural emotion recognition, real-time latency, and user privacy remain. Future improvements aim to address these areas through model fine-tuning, lightweight client-side models, and privacy-preserving architectures.</p>"
+      },
+      {
+        "type": "image",
+        "src": "/assets/multimodal-inferface-1.jpg",
+        "alt": "Date Sync",
+        "width": 1789,
+        "height": 1010
+      },
+      {
+        "type": "text",
+        "html": "<p>DateSync&#x27;s architecture consists of several interconnected components:</p>\n<p><strong>1. Video Input Processing: </strong>Video and audio extraction/ Frame extraction at 5 FPS/ Audio-to-text transcription</p>\n<p><strong>2. Modality-Specific Feature Extraction:</strong></p>\n<p>Visual Pipeline: FER (Facial Emotion Recognition) for basic emotions and MediaPipe for facial movements and eye tracking</p>\n<p>Visual Pipeline: FER (Facial Emotion Recognition) for basic emotions and MediaPipe for facial movements and eye tracking</p>\n<p>Audio Pipeline: Parselmouth for extracting pitch and intensity features</p>\n<p>Audio Pipeline: Parselmouth for extracting pitch and intensity features</p>\n<p>Text Pipeline: Whisper for transcription and GPT for sentiment analysis</p>\n<p>Text Pipeline: Whisper for transcription and GPT for sentiment analysis</p>\n<p><strong>3. Feature Alignment:</strong> Synchronization of features across modalities</p>\n<p><strong>4. Feature Fusion:</strong> Weighted combination of features from different modalities</p>\n<p><strong>5. Prediction Layer:</strong> Generation of core emotional metrics</p>\n<p><strong>6. Feedback Generation:</strong> AI-powered analysis and suggestions</p>\n<p><strong>7. Compatibility Calculation:</strong> For two-person videos</p>"
+      },
+      {
+        "type": "image",
+        "src": "/assets/multimodal-inferface-2.png",
+        "alt": "Date Sync",
+        "width": 1649,
+        "height": 952
+      }
+    ]
+  },
+  {
+    "title": "404 Housing Not Found",
+    "slug": "404-housing-not-found",
+    "category": "projects",
+    "originalPath": "/ai-more/404-housing-not-found",
+    "sourceUrl": "https://www.myangsun.com/ai-more/404-housing-not-found",
+    "cover": "/assets/404-housing-not-found-cover.jpg",
+    "summary": "Visualizing Evictions and Corporate Landlord Influence in Massachusetts",
+    "blocks": [
+      {
+        "type": "image",
+        "src": "/assets/404-housing-not-found-0.png",
+        "alt": "404 Housing Not Found",
+        "width": 2500,
+        "height": 1021
+      },
+      {
+        "type": "text",
+        "html": "<p><a href=\"https://myangsun.github.io/boston-eviction/\" rel=\"noopener noreferrer\">Website</a></p>"
+      },
+      {
+        "type": "text",
+        "html": "<p>Building on prior research on racial inequities in Massachusetts evictions, this study explores the spatial and systemic dynamics of housing displacement, focusing on the role of corporate and absentee landlords in eviction patterns. Using multimodal data visualization, including GIS mapping, eviction records, and property ownership databases, this research aims to reveal the geographic concentration of evictions, the power structures behind housing instability, and the relationship between corporate ownership and displacement rates. <br><br>By integrating machine learning techniques and interactive dashboards, this study provides a participatory and transparent lens for policymakers, housing advocates, and researchers to understand eviction patterns, corporate control over rental properties, and their broader socioeconomic impacts. The findings will contribute to data-driven policy recommendations aimed at promoting housing justice, tenant protections, and equitable urban development.</p>"
+      },
+      {
+        "type": "image",
+        "src": "/assets/404-housing-not-found-1.png",
+        "alt": "404 Housing Not Found",
+        "width": 2044,
+        "height": 1336
+      },
+      {
+        "type": "image",
+        "src": "/assets/404-housing-not-found-2.png",
+        "alt": "404 Housing Not Found",
+        "width": 2148,
+        "height": 1432
+      },
+      {
+        "type": "image",
+        "src": "/assets/404-housing-not-found-3.png",
+        "alt": "404 Housing Not Found",
+        "width": 2155,
+        "height": 1437
+      },
+      {
+        "type": "image",
+        "src": "/assets/404-housing-not-found-4.png",
+        "alt": "404 Housing Not Found",
+        "width": 2186,
+        "height": 1457
+      },
+      {
+        "type": "image",
+        "src": "/assets/404-housing-not-found-5.png",
+        "alt": "404 Housing Not Found",
+        "width": 2420,
+        "height": 1422
+      }
+    ]
+  },
+  {
+    "title": "Recitygen",
+    "slug": "recitygen",
+    "category": "projects",
+    "originalPath": "/ai-more/recitygen",
+    "sourceUrl": "https://www.myangsun.com/ai-more/recitygen",
+    "cover": "/assets/recitygen-cover.png",
+    "summary": "Interactive and Generative Participatory Urban Design Tool",
+    "blocks": [
+      {
+        "type": "image",
+        "src": "/assets/recitygen-0.jpg",
+        "alt": "Recitygen",
+        "width": 1115,
+        "height": 627
+      },
+      {
+        "type": "text",
+        "html": "<p>RECITYGEN is a tool aiming at enhancing urban design through participatory methods. Its primary goal is to enable collaboration between residents and urban planners, ensuring that community needs and preferences are incorporated into urban development. The tool harnesses latent diffusion models and the Segment Anything Model (SAM) to create an accessible platform for public input in urban design. Users interact with RECITYGEN by uploading street view images to its online interface and using SAM to mark areas for improvement. A key feature is the tool’s AI-driven visualization: users provide text descriptions of desired changes, and RECITYGEN uses a latent diffusion model to quickly generate a visual preview of these changes.</p>\n<p>The tool, first tested in a Beijing urban renewal project, received positive feedback. This suggests it is effective in aligning urban design with the expectations of the public. Future plans include broadening its application, improving user interaction, and encouraging more community participation in the urban design process.</p>"
+      },
+      {
+        "type": "image",
+        "src": "/assets/recitygen-1.jpg",
+        "alt": "Recitygen",
+        "width": 3600,
+        "height": 2400
+      },
+      {
+        "type": "image",
+        "src": "/assets/recitygen-2.jpg",
+        "alt": "Recitygen",
+        "width": 3600,
+        "height": 2400
+      },
+      {
+        "type": "image",
+        "src": "/assets/recitygen-3.jpg",
+        "alt": "Recitygen",
+        "width": 5400,
+        "height": 3600
+      },
+      {
+        "type": "image",
+        "src": "/assets/recitygen-4.jpg",
+        "alt": "Recitygen",
+        "width": 5400,
+        "height": 3600
+      }
+    ]
+  },
+  {
+    "title": "Urban Echoes",
+    "slug": "urban-echoes",
+    "category": "projects",
+    "originalPath": "/ai-more/urban-echoes",
+    "sourceUrl": "https://www.myangsun.com/ai-more/urban-echoes",
+    "cover": "/assets/urban-echoes-cover.jpg",
+    "summary": "AI-Guided Exploration of Istanbul’s Cityscape Similarities",
+    "blocks": [
+      {
+        "type": "image",
+        "src": "/assets/urban-echoes-0.jpg",
+        "alt": "Urban Echoes",
+        "width": 2121,
+        "height": 1193
+      },
+      {
+        "type": "text",
+        "html": "<p>Confronting the challenge of understanding urban complexity, the Urban Echos project in Istanbul set out to reveal the historical connections of the city with Athens, Rome, Paris, and Bursa. The goal is to discern similarities across these cities by examining their urban characteristics in depth. </p>\n<p>The Urban Echoes project provides insights into the complex structure of urban environments and enhances the understanding of residents and urban designers. By using machine learning and data analysis, the project sheds light on the detailed nature of urban features.</p>"
+      },
+      {
+        "type": "image",
+        "src": "/assets/urban-echoes-1.jpg",
+        "alt": "Urban Echoes",
+        "width": 5400,
+        "height": 3600
+      },
+      {
+        "type": "text",
+        "html": "<p>This comprehensive analysis involves three key techniques: satellite images are processed using U-Net for segmentation, revealing urban textures like buildings, streets, green spaces, and water bodies. Street views are dissected using the DPT model, segmenting images into elements such as buildings, streets, sidewalks, sky, and greenery. Lastly, the ResNet model is used to classify architectural styles, identifying 52 styles. These components are compared with similar elements in other cities, using standardized scores to measure similarities.</p>"
+      },
+      {
+        "type": "image",
+        "src": "/assets/urban-echoes-2.jpg",
+        "alt": "Urban Echoes",
+        "width": 7272,
+        "height": 5088
+      },
+      {
+        "type": "image",
+        "src": "/assets/urban-echoes-3.jpg",
+        "alt": "Urban Echoes",
+        "width": 7164,
+        "height": 4776
+      },
+      {
+        "type": "image",
+        "src": "/assets/urban-echoes-4.jpg",
+        "alt": "Urban Echoes",
+        "width": 5418,
+        "height": 3612
+      },
+      {
+        "type": "image",
+        "src": "/assets/urban-echoes-5.jpg",
+        "alt": "Urban Echoes",
+        "width": 5400,
+        "height": 3600
+      },
+      {
+        "type": "image",
+        "src": "/assets/urban-echoes-6.jpg",
+        "alt": "Urban Echoes",
+        "width": 5094,
+        "height": 3396
+      }
+    ]
+  },
+  {
+    "title": "Cognitive Landscapes",
+    "slug": "cognitive-landscapes",
+    "category": "projects",
+    "originalPath": "/ai-more/cognitive-landscapes",
+    "sourceUrl": "https://www.myangsun.com/ai-more/cognitive-landscapes",
+    "cover": "/assets/cognitive-landscapes-cover.jpg",
+    "summary": "Exploring Emotional Responses in VR-EEG Driven Art therapy",
+    "blocks": [
+      {
+        "type": "image",
+        "src": "/assets/cognitive-landscapes-0.jpg",
+        "alt": "Cognitive Landscapes",
+        "width": 2500,
+        "height": 1406
+      },
+      {
+        "type": "text",
+        "html": "<p>This project addresses the escalating mental health crisis by integrating Electroencephalogram (EEG) technology with Virtual Reality (VR) in art therapy. Traditional art therapy faces challenges in medium selection and measuring progress, which are addressed by our VR-EEG platform. This immersive environment enhances therapeutic engagement and facilitates emotional expression.</p>\n<p>The VR-based art therapy procedure unfolds in three phases: planning, creation, and sharing, each crafted to elicit specific emotional responses. Various VR scenarios, encompassing diverse contexts, textures, and models, were developed to explore their impact on participants’ perceptions and emotions. In this project, interactions of 12 participants within VR settings were tracked using EEG technology. The focus was on examining shifts in alpha, beta, and theta brainwaves, which are critical indicators of emotion states. Integration of EEG allows for real-time brain activity monitoring, offering deep insights into the emotional effects of the therapy. The project also includes a sharing platform, enabling participants to share art creations, give feedback, and communicate feelings with others.</p>"
+      },
+      {
+        "type": "image",
+        "src": "/assets/cognitive-landscapes-1.jpg",
+        "alt": "Cognitive Landscapes",
+        "width": 5814,
+        "height": 3876
+      },
+      {
+        "type": "image",
+        "src": "/assets/cognitive-landscapes-2.jpg",
+        "alt": "Cognitive Landscapes",
+        "width": 5400,
+        "height": 3600
+      },
+      {
+        "type": "image",
+        "src": "/assets/cognitive-landscapes-3.jpg",
+        "alt": "Cognitive Landscapes",
+        "width": 5400,
+        "height": 3600
+      },
+      {
+        "type": "image",
+        "src": "/assets/cognitive-landscapes-4.jpg",
+        "alt": "Cognitive Landscapes",
+        "width": 5400,
+        "height": 3600
+      },
+      {
+        "type": "image",
+        "src": "/assets/cognitive-landscapes-5.jpg",
+        "alt": "Cognitive Landscapes",
+        "width": 5400,
+        "height": 3600
+      },
+      {
+        "type": "image",
+        "src": "/assets/cognitive-landscapes-6.jpg",
+        "alt": "Cognitive Landscapes",
+        "width": 6409,
+        "height": 4284
+      }
+    ]
+  },
+  {
+    "title": "Sectional Sampling",
+    "slug": "sectional-sampling",
+    "category": "projects",
+    "originalPath": "/ai-more/sectional-sampling",
+    "sourceUrl": "https://www.myangsun.com/ai-more/sectional-sampling",
+    "cover": "/assets/sectional-sampling-cover.jpg",
+    "summary": "Controlled Generation of High-Resolution Architecture Design",
+    "blocks": [
+      {
+        "type": "image",
+        "src": "/assets/sectional-sampling-0.jpg",
+        "alt": "Sectional Sampling",
+        "width": 2500,
+        "height": 1406
+      },
+      {
+        "type": "text",
+        "html": "<p>This paper addresses the challenge of algorithmically generating 3D architectural designs. Conventional rule-based methods and GAN-based 3D generative models offer limited extrapolation and control and are limited to generating low-resolution results. Our method utilizes fine-tuned latent diffusion models, specifically Stable Diffusion, applied to an architectural dataset, to produce detailed architectural sections. These are then synthesized into 3D models using latent interpolation.</p>\n<p>The pipeline starts with creating sectional poché datasets for various building typologies—houses, museums, and offices. The fine-tuned Stable Diffusion models, enhanced through LoRA, generate new sections, conditioned on section profiles via ControlNet. This ensures fluid transitions between sections. The generated sections are reconstructed into 3D models using the Marching Cubes algorithm within the Grasshopper. Our research contributes significantly to AI-generated architectural content, providing designers with advanced tools for creating high-quality, controlled models during the initial stages of a project.</p>"
+      },
+      {
+        "type": "image",
+        "src": "/assets/sectional-sampling-1.jpg",
+        "alt": "Sectional Sampling",
+        "width": 5400,
+        "height": 3600
+      },
+      {
+        "type": "image",
+        "src": "/assets/sectional-sampling-2.jpg",
+        "alt": "Sectional Sampling",
+        "width": 5400,
+        "height": 3600
+      },
+      {
+        "type": "image",
+        "src": "/assets/sectional-sampling-3.jpg",
+        "alt": "Sectional Sampling",
+        "width": 5400,
+        "height": 3600
+      },
+      {
+        "type": "image",
+        "src": "/assets/sectional-sampling-4.jpg",
+        "alt": "Sectional Sampling",
+        "width": 5400,
+        "height": 3600
+      }
+    ]
+  },
+  {
+    "title": "Spatial Symmetry",
+    "slug": "spatial-symmetry",
+    "category": "projects",
+    "originalPath": "/ai-more/spatial-symmetry",
+    "sourceUrl": "https://www.myangsun.com/ai-more/spatial-symmetry",
+    "cover": "/assets/spatial-symmetry-cover.jpg",
+    "summary": "Algorithmic Exploration of Calabi-Yau Forms",
+    "blocks": [
+      {
+        "type": "image",
+        "src": "/assets/spatial-symmetry-0.jpg",
+        "alt": "Spatial Symmetry",
+        "width": 9000,
+        "height": 4362
+      },
+      {
+        "type": "text",
+        "html": "<p>This project merges the disciplines of architecture, geometry, and computational science to utilize generative systems in transforming Calabi-Yau manifolds, which are pivotal in algebraic geometry and superstring theory, into innovative three-dimensional architectural models. The process begins with conformal mapping to maintain the local angles of Calabi-Yau manifolds, thereby streamlining the complexity of their geometrical attributes. Subsequently, a 4D conformal Calabi-Yau manifold is mapped and subjected to stereographic projection to achieve a 3D visual representation. The final step involves the 3D reconstruction of point clouds into a mesh format.</p>\n<p>Emphasizing algorithmic design principles, the project adopts an iterative, experimental approach to leverage computational capabilities for creating diverse spatial structures. This method underscores the importance of spatial dimensions in architectural design and highlights the role of advanced technology in visualizing and interpreting intricate spatial forms. The project aims not just to explore theoretical concepts but also to offer practical applications in architectural design, pushing the boundaries of how we understand and utilize space in the built environment.</p>"
+      },
+      {
+        "type": "image",
+        "src": "/assets/spatial-symmetry-1.jpg",
+        "alt": "Spatial Symmetry",
+        "width": 5400,
+        "height": 3600
+      },
+      {
+        "type": "image",
+        "src": "/assets/spatial-symmetry-2.jpg",
+        "alt": "Spatial Symmetry",
+        "width": 7236,
+        "height": 4824
+      },
+      {
+        "type": "image",
+        "src": "/assets/spatial-symmetry-3.jpg",
+        "alt": "Spatial Symmetry",
+        "width": 7705,
+        "height": 5136
+      }
+    ]
+  },
+  {
+    "title": "Water Miner",
+    "slug": "water-miner",
+    "category": "design",
+    "originalPath": "/design/water-miner",
+    "sourceUrl": "https://www.myangsun.com/design/water-miner",
+    "cover": "/assets/water-miner-cover.jpeg",
+    "summary": "By 2025, frequent extreme weather and air pollution have rendered Johannesburg no longer suitable for human habitation on the ground. As a result, the residents of Johannesburg established an underground city by expanding old abandoned gold mines for survival.",
+    "blocks": [
+      {
+        "type": "image",
+        "src": "/assets/water-miner-cover.jpeg",
+        "alt": "Water Miner",
+        "width": 9600,
+        "height": 5168
+      },
+      {
+        "type": "text",
+        "html": "<h4>Speculation on Johannesburg 2050</h4>"
+      },
+      {
+        "type": "text",
+        "html": "<p><strong>Website</strong>: https://www.speculationonsettlement.net/johannesburg</p>\n<p><strong>Video</strong>: https://vimeo.com/489475636</p>"
+      },
+      {
+        "type": "text",
+        "html": "<p>By 2025, frequent extreme weather and air pollution have rendered Johannesburg no longer suitable for human habitation on the ground. As a result, the residents of Johannesburg established an underground city by expanding old abandoned gold mines for survival. However, the worsening water crisis has made people realize that only by giving back to nature and restoring the ecological environment can they obtain stable and sustainable water resources capable of supporting habitation.</p>\n<p>The people of Johannesburg have united to initiate the Plant Cultivation and Water Conservation Project (PCWCP), hoping to improve soil health and restore groundwater levels through technologically enabled plant cultivation. Through the efforts of several generations, the turning point came in 2050 brought on by PCWCP 5.0.</p>"
+      },
+      {
+        "type": "image",
+        "src": "/assets/water-miner-1.jpg",
+        "alt": "Water Miner",
+        "width": 976,
+        "height": 549
+      },
+      {
+        "type": "image",
+        "src": "/assets/water-miner-2.jpg",
+        "alt": "Water Miner",
+        "width": 971,
+        "height": 546
+      },
+      {
+        "type": "image",
+        "src": "/assets/water-miner-3.jpg",
+        "alt": "Water Miner",
+        "width": 957,
+        "height": 1030
+      },
+      {
+        "type": "image",
+        "src": "/assets/water-miner-4.jpg",
+        "alt": "Water Miner",
+        "width": 5400,
+        "height": 3600
+      }
+    ]
+  },
+  {
+    "title": "Inclusive & Connected Landscapes",
+    "slug": "inclusive-and-connected-landscapes",
+    "category": "design",
+    "originalPath": "/design/inclusive-and-connected-landscapes",
+    "sourceUrl": "https://www.myangsun.com/design/inclusive-and-connected-landscapes",
+    "cover": "/assets/inclusive-and-connected-landscapes-cover.png",
+    "summary": "Over a billion people around the globe live in unplanned of self-constructed settlements frequently at peri-urban locations, excluded from the benefits of city life, and occupying high-risk sites.",
+    "blocks": [
+      {
+        "type": "image",
+        "src": "/assets/inclusive-and-connected-landscapes-0.png",
+        "alt": "Inclusive & Connected Landscapes",
+        "width": 3529,
+        "height": 1985
+      },
+      {
+        "type": "text",
+        "html": "<h2><strong>Inclusive and connected landscapes</strong></h2>"
+      },
+      {
+        "type": "text",
+        "html": "<h4>For Self-Constructed Settlements in Quito, Ecuador</h4>"
+      },
+      {
+        "type": "text",
+        "html": "<p>ASLA 2021 Student Award</p>"
+      },
+      {
+        "type": "text",
+        "html": "<p>Over a billion people around the globe live in unplanned of self-constructed settlements frequently at peri-urban locations, excluded from the benefits of city life, and occupying high-risk sites. Latin America is still considered the continent with the highest social inequalities, manifested in the disconnection between the formal and the informal areas. These areas are characterized by environmental/health problems, the lack of communal services, infrastructure, and public spaces, poor accessibility, stigmatization by the formal city, and presenting low income and high levels of violence.</p>\n<p>This project posits that landscape-driven approaches are powerful tools to address the concerns above, fostering social inclusion, breaking down physical and cultural barriers, connecting the settlements to their natural systems, linking formal areas to the informal ones, improving physical and performative relations among the informal settlements, and establishing productive local, urban, and metropolitan networks. Supported by Quito municipality, a composite of informal enclaves, including Comité del Pueblo, La Bota, and Puertas del Sol, located on rather flat land in the northeast of Quito, Ecuador was selected as the site.</p>"
+      },
+      {
+        "type": "image",
+        "src": "/assets/inclusive-and-connected-landscapes-1.jpg",
+        "alt": "Inclusive & Connected Landscapes",
+        "width": 5400,
+        "height": 3612
+      },
+      {
+        "type": "image",
+        "src": "/assets/inclusive-and-connected-landscapes-2.jpg",
+        "alt": "Inclusive & Connected Landscapes",
+        "width": 5400,
+        "height": 3600
+      },
+      {
+        "type": "image",
+        "src": "/assets/inclusive-and-connected-landscapes-3.jpg",
+        "alt": "Inclusive & Connected Landscapes",
+        "width": 7254,
+        "height": 4836
+      }
+    ]
+  },
+  {
+    "title": "Shifting Edges",
+    "slug": "shifting-edges",
+    "category": "design",
+    "originalPath": "/design/shifting-edges",
+    "sourceUrl": "https://www.myangsun.com/design/shifting-edges",
+    "cover": "/assets/shifting-edges-cover.jpg",
+    "summary": "The Indian Point Nuclear Power Plant is located on the East bank of the Hudson river in Peekskill. It is scheduled to be closed down in 2020. The Indian Point Closure Task Force 2018 Report explains that the full process of decommissioning could take as long as 50 years.",
+    "blocks": [
+      {
+        "type": "image",
+        "src": "/assets/shifting-edges-0.jpg",
+        "alt": "Shifting Edges",
+        "width": 5100,
+        "height": 3300
+      },
+      {
+        "type": "text",
+        "html": "<h4>Re-imagining Indian Point - A 50 Year Plan</h4>"
+      },
+      {
+        "type": "text",
+        "html": "<p>The Indian Point Nuclear Power Plant is located on the East bank of the Hudson river in Peekskill. It is scheduled to be closed down in 2020. The Indian Point Closure Task Force 2018 Report explains that the full process of decommissioning could take as long as 50 years. In certain areas, the fences could be safely removed tomorrow, but in others, it will take much longer to fully erase this place from the landscape. The psychological borders will have their own timeline, as years of fear and misunderstanding have created an invisible barrier to development. Both edges - physical and emotional - will shift when the Plant is shut down, Peekskill and Verplanck and the Town of Cortland should take this time to examine and act on these edges.</p>"
+      },
+      {
+        "type": "image",
+        "src": "/assets/shifting-edges-1.jpg",
+        "alt": "Shifting Edges",
+        "width": 5400,
+        "height": 3600
+      },
+      {
+        "type": "image",
+        "src": "/assets/shifting-edges-2.jpg",
+        "alt": "Shifting Edges",
+        "width": 5400,
+        "height": 3600
+      },
+      {
+        "type": "image",
+        "src": "/assets/shifting-edges-3.jpg",
+        "alt": "Shifting Edges",
+        "width": 5400,
+        "height": 3600
+      },
+      {
+        "type": "image",
+        "src": "/assets/shifting-edges-4.jpg",
+        "alt": "Shifting Edges",
+        "width": 5400,
+        "height": 3600
+      }
+    ]
+  },
+  {
+    "title": "Creator Matcher",
+    "slug": "creator-matcher",
+    "category": "design",
+    "originalPath": "/design/creator-matcher",
+    "sourceUrl": "https://www.myangsun.com/design/creator-matcher",
+    "cover": "/assets/creator-matcher-cover.png",
+    "summary": "CreatorMatcher is a user-centric platform designed to streamline influencer marketing by connecting brands with creators who align with their values and audience needs.",
+    "blocks": [
+      {
+        "type": "image",
+        "src": "/assets/creator-matcher-0.png",
+        "alt": "Creator Matcher",
+        "width": 1440,
+        "height": 700
+      },
+      {
+        "type": "text",
+        "html": "<h4>An Influencer Marketing Platform</h4>"
+      },
+      {
+        "type": "text",
+        "html": "<p>CreatorMatcher is a user-centric platform designed to streamline influencer marketing by connecting brands with creators who align with their values and audience needs. The platform offers an intuitive interface for brands to discover, evaluate, and manage influencer campaigns, featuring a rich suite of tools for creator discovery, campaign management, and performance analytics.</p>\n<p>The platform primarily targets brand managers, marketers, and business owners in the lifestyle, wellness, and food industries who are looking to enhance their marketing efforts through authentic influencer collaborations. It also provides a space for influencers to showcase their portfolios and connect with potential brand partners.</p>"
+      },
+      {
+        "type": "image",
+        "src": "/assets/creator-matcher-1.png",
+        "alt": "Creator Matcher",
+        "width": 2912,
+        "height": 8042
+      },
+      {
+        "type": "image",
+        "src": "/assets/creator-matcher-2.png",
+        "alt": "Creator Matcher",
+        "width": 2880,
+        "height": 6008
+      },
+      {
+        "type": "image",
+        "src": "/assets/creator-matcher-3.png",
+        "alt": "Creator Matcher",
+        "width": 2880,
+        "height": 9374
+      }
+    ]
+  },
+  {
+    "title": "Connecity",
+    "slug": "connecity",
+    "category": "design",
+    "originalPath": "/design/connecity",
+    "sourceUrl": "https://www.myangsun.com/design/connecity",
+    "cover": "/assets/connecity-cover.jpg",
+    "summary": "Connecity is designed around four main goals: Connecting Transportation Systems, Integrating Open Spaces, Inclusiveness in the Community, and Place-making for Businesses. ",
+    "blocks": [
+      {
+        "type": "image",
+        "src": "/assets/connecity-0.jpg",
+        "alt": "Connecity",
+        "width": 2140,
+        "height": 1203
+      },
+      {
+        "type": "text",
+        "html": "<h4>East Village Neighborhood Redevelopment</h4>"
+      },
+      {
+        "type": "text",
+        "html": "<p>Connecity is designed around four main goals: Connecting Transportation Systems, Integrating Open Spaces, Inclusiveness in the Community, and Place-making for Businesses. </p>"
+      },
+      {
+        "type": "image",
+        "src": "/assets/connecity-1.jpg",
+        "alt": "Connecity",
+        "width": 5400,
+        "height": 3600
+      },
+      {
+        "type": "image",
+        "src": "/assets/connecity-2.jpg",
+        "alt": "Connecity",
+        "width": 5400,
+        "height": 3600
+      },
+      {
+        "type": "text",
+        "html": "<p><strong>Connection of Transportation System</strong>: The project, in the heart of CBD, will implement a TOD System on each North and South end to create a connection to the existing transportation system. Transitioning from an automobile-oriented system to a public transit-oriented system encourages all commuters to use various transit options to navigate through the city. </p>\n<p><strong>Integration of Open Spaces</strong>: The project seeks to bridge surrounding green networks, which are currently disconnected by highway barriers. Various building programs and functions are integrated by a pedestrian and bike-friendly main circulation running North-South, providing an easy and diverse experience of open spaces. </p>\n<p><strong>Inclusiveness for Community</strong>: By providing affordable housing for low-income residents and various housing options, it can prevent the issues of gentrification and social divides through spaces. </p>\n<p><strong>Placemaking for Business</strong>: By proposing music, art, and sports industries in the site, will not only promote the East Village with its local identity but also revitalize the small businesses and improve the overall economy of the city. </p>"
+      }
+    ]
+  },
+  {
+    "title": "Equitable Loop",
+    "slug": "equitable-loop",
+    "category": "design",
+    "originalPath": "/design/equitable-loop",
+    "sourceUrl": "https://www.myangsun.com/design/equitable-loop",
+    "cover": "/assets/equitable-loop-cover.jpg",
+    "summary": "The intention of this studio is to creatively and imaginatively experiment with public realm, urban form and building typologies by reimagining Chicago’s incomplete and under-utilized Park and Boulevard System(PBS).",
+    "blocks": [
+      {
+        "type": "image",
+        "src": "/assets/equitable-loop-0.jpg",
+        "alt": "Equitable Loop",
+        "width": 2951,
+        "height": 1816
+      },
+      {
+        "type": "text",
+        "html": "<h4>Revitalizing Chicago Park and Boulevard system</h4>"
+      },
+      {
+        "type": "text",
+        "html": "<p>The intention of this studio is to creatively and imaginatively experiment with public realm, urban form and building typologies by reimagining Chicago’s incomplete and under-utilized Park and Boulevard System(PBS). The exploration of a more equitable, healthy and prosperous urban future is achieved through design manipulation with four interrelated urban systems - enhanced mobility; improved housing; expanded civic infrastructure; and optimized environmental performance.</p>"
+      },
+      {
+        "type": "image",
+        "src": "/assets/equitable-loop-1.jpg",
+        "alt": "Equitable Loop",
+        "width": 5400,
+        "height": 3600
+      },
+      {
+        "type": "image",
+        "src": "/assets/equitable-loop-2.jpg",
+        "alt": "Equitable Loop",
+        "width": 5400,
+        "height": 3600
+      },
+      {
+        "type": "image",
+        "src": "/assets/equitable-loop-3.jpg",
+        "alt": "Equitable Loop",
+        "width": 5400,
+        "height": 3600
+      }
+    ]
+  },
+  {
+    "title": "Thickening City Wall",
+    "slug": "thickening-city-wall",
+    "category": "design",
+    "originalPath": "/design/thickening-city-wall",
+    "sourceUrl": "https://www.myangsun.com/design/thickening-city-wall",
+    "cover": "/assets/thickening-city-wall-cover.jpg",
+    "summary": "Nanjing City Wall built in the 14th century was an important defense project for guarding the country&#x27;s capital upon Ming Emperor Zhu Yuanzhang establishing a capital in Nanjing. The ancient city walls divide the city from the landscape and make their interrelationship more tangible.",
+    "blocks": [
+      {
+        "type": "image",
+        "src": "/assets/thickening-city-wall-0.jpg",
+        "alt": "Thickening City Wall",
+        "width": 1800,
+        "height": 1013
+      },
+      {
+        "type": "text",
+        "html": "<h4>Yacht Club In-between city wall and landscape</h4>"
+      },
+      {
+        "type": "text",
+        "html": "<p>Nanjing City Wall built in the 14th century was an important defense project for guarding the country&#x27;s capital upon Ming Emperor Zhu Yuanzhang establishing a capital in Nanjing. The ancient city walls divide the city from the landscape and make their interrelationship more tangible. Due to Nanjing&#x27;s rapid modernization, the city sprawls far beyond the Ming City Wall. Ancient city walls are surrounded by a more complex city context.</p>"
+      },
+      {
+        "type": "image",
+        "src": "/assets/thickening-city-wall-1.jpg",
+        "alt": "Thickening City Wall",
+        "width": 5400,
+        "height": 3600
+      },
+      {
+        "type": "text",
+        "html": "<p>The site is situated in-between Xuanwu Lake and the city wall,  which is one of the oldest parts of human use landscape navy training. The project considers how a contemporary public space could negotiate between city and landscape by continuing the cultural and historical features of ancient city walls. The yacht club grows from the slope of the lake band, trying not to destroy the natural scenery around the lake and historical features of the city wall, but to connect the vertical gap and lead people to the lake. It brings new opportunities for people to be closer to the water and complete the full circulation of the tour route around the lake.</p>"
+      },
+      {
+        "type": "image",
+        "src": "/assets/thickening-city-wall-2.jpg",
+        "alt": "Thickening City Wall",
+        "width": 5400,
+        "height": 3600
+      },
+      {
+        "type": "image",
+        "src": "/assets/thickening-city-wall-3.jpg",
+        "alt": "Thickening City Wall",
+        "width": 5400,
+        "height": 3600
+      },
+      {
+        "type": "image",
+        "src": "/assets/thickening-city-wall-4.jpg",
+        "alt": "Thickening City Wall",
+        "width": 5400,
+        "height": 3600
+      }
+    ]
+  },
+  {
+    "title": "Breaking Border Wall",
+    "slug": "breaking-border-wall",
+    "category": "design",
+    "originalPath": "/design/breaking-border-wall",
+    "sourceUrl": "https://www.myangsun.com/design/breaking-border-wall",
+    "cover": "/assets/breaking-border-wall-cover.jpg",
+    "summary": "The project is to design a headquarters for IBWC (The International Boundary and Water Commission) in the border area between the El Paso (America) and Juarez (Mexico). The cities are separated by the Rio Grande, which serves as the borderline here.",
+    "blocks": [
+      {
+        "type": "image",
+        "src": "/assets/breaking-border-wall-0.jpg",
+        "alt": "Breaking Border Wall",
+        "width": 2251,
+        "height": 1266
+      },
+      {
+        "type": "text",
+        "html": "<h4>IBWC Headquarter</h4>"
+      },
+      {
+        "type": "text",
+        "html": "<p>The project is to design a headquarters for IBWC (The International Boundary and Water Commission) in the border area between the El Paso (America) and Juarez (Mexico). The cities are separated by the Rio Grande, which serves as the borderline here. The America–Mexico border is a fluctuating, yet highly controlled political landscape. Over the past 150 years, the border has changed from an invisible and unmapped line into a 2,500-mile frontier region characterized by unique economic and spatial conditions. Especially after Trump&#x27;s proposal of the construction of a border &quot;wall&quot;, whether such huge physical walls should be built to split two countries draws attention all over the world.</p>"
+      },
+      {
+        "type": "image",
+        "src": "/assets/breaking-border-wall-1.jpg",
+        "alt": "Breaking Border Wall",
+        "width": 5400,
+        "height": 3600
+      },
+      {
+        "type": "image",
+        "src": "/assets/breaking-border-wall-2.jpg",
+        "alt": "Breaking Border Wall",
+        "width": 5400,
+        "height": 3600
+      },
+      {
+        "type": "image",
+        "src": "/assets/breaking-border-wall-3.jpg",
+        "alt": "Breaking Border Wall",
+        "width": 5400,
+        "height": 3600
+      },
+      {
+        "type": "image",
+        "src": "/assets/breaking-border-wall-4.jpg",
+        "alt": "Breaking Border Wall",
+        "width": 5400,
+        "height": 3600
+      }
+    ]
+  },
+  {
+    "title": "Reviving Cultural Heritage",
+    "slug": "reviving-cultural-heritage",
+    "category": "design",
+    "originalPath": "/design/reviving-cultural-heritage",
+    "sourceUrl": "https://www.myangsun.com/design/reviving-cultural-heritage",
+    "cover": "/assets/reviving-cultural-heritage-cover.jpg",
+    "summary": "Since 2005, the discovery of the Dongwu Tomb in Nanjing has provided valuable information and a platform for the study of Dongwu culture. We can detect the economic visage and social status of the Dingwu Dynasty from the tomb, wares, and inscriptions unearthed.",
+    "blocks": [
+      {
+        "type": "image",
+        "src": "/assets/reviving-cultural-heritage-0.jpg",
+        "alt": "Reviving Cultural Heritage",
+        "width": 12084,
+        "height": 5709
+      },
+      {
+        "type": "text",
+        "html": "<h4>Archaeological Park</h4>"
+      },
+      {
+        "type": "text",
+        "html": "<p>Since 2005, the discovery of the Dongwu Tomb in Nanjing has provided valuable information and a platform for the study of Dongwu culture. We can detect the economic visage and social status of the Dingwu Dynasty from the tomb, wares, and inscriptions unearthed. The project is to preserve the discovered tomb and develop the area into an archaeological park.</p>\n<p>The concept of overall planning is to restore the burial system and introduce modern activities. It not only shows the grand narrative of the burial system but also makes tourists feel the daily life of the city. Besides the exhibition of the main body of the tomb, the museum, and the archaeological station, the park&#x27;s main function is to plan the experience area of Sun Wu culture - the experience of nostalgia culture / the experience of city life. <br></p>"
+      },
+      {
+        "type": "image",
+        "src": "/assets/reviving-cultural-heritage-1.jpg",
+        "alt": "Reviving Cultural Heritage",
+        "width": 5400,
+        "height": 3600
+      },
+      {
+        "type": "image",
+        "src": "/assets/reviving-cultural-heritage-2.jpg",
+        "alt": "Reviving Cultural Heritage",
+        "width": 5400,
+        "height": 3600
+      }
+    ]
+  },
+  {
+    "title": "Commemorating Old and New",
+    "slug": "commemorating-old-and-new",
+    "category": "design",
+    "originalPath": "/design/commemorating-old-and-new",
+    "sourceUrl": "https://www.myangsun.com/design/commemorating-old-and-new",
+    "cover": "/assets/commemorating-old-and-new-cover.jpg",
+    "summary": "Hexing warehouse was built in 1930 along the Huangpu River during the industrialization of contemporary Shanghai. It had a unique flat slab concrete structure with octagonal columns and façades.",
+    "blocks": [
+      {
+        "type": "image",
+        "src": "/assets/commemorating-old-and-new-cover.jpg",
+        "alt": "Commemorating Old and New",
+        "width": 4352,
+        "height": 3600
+      },
+      {
+        "type": "text",
+        "html": "<h4>Hexing Museum Renovation</h4>"
+      },
+      {
+        "type": "text",
+        "html": "<p>Hexing warehouse was built in 1930 along the Huangpu River during the industrialization of contemporary Shanghai. It had a unique flat slab concrete structure with octagonal columns and façades. However, after an industrial structural upgrade in the 1980s, it was abandoned, and nowadays it is one of the preserved industrial buildings in World Expo Park. The purpose of the project is to renovate the warehouse into a museum memorizing modern industry development in Shanghai from the 1930s.</p>\n<p>The concept of the program is to juxtapose the new and the old structures, so people would experience the cultural gap when wandering around the building in 80 years and sense the continuity of time. The northern façade facing the river will remain the features of the old warehouse. Also, the new insertion would adapt to the light, sight, and circulation needs of the museum. </p>"
+      },
+      {
+        "type": "image",
+        "src": "/assets/commemorating-old-and-new-1.jpg",
+        "alt": "Commemorating Old and New",
+        "width": 5400,
+        "height": 3600
+      },
+      {
+        "type": "image",
+        "src": "/assets/commemorating-old-and-new-2.jpg",
+        "alt": "Commemorating Old and New",
+        "width": 5400,
+        "height": 3600
+      }
+    ]
+  }
+]

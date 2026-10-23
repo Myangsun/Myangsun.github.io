@@ -1,0 +1,10 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProjectGrid from '../../components/ProjectGrid.astro';
+import portfolio from '../../data/portfolio.json';
+const projects = portfolio.filter(item => item.category === 'design');
+---
+<Layout title="Design" active="Design">
+  <section class="page-intro"><h1>Design<span class="page-count" aria-label={`${projects.length} works`}>({String(projects.length).padStart(2, '0')})</span></h1><p>Selected work in architecture, urban design, landscapes, and human-centered experiences.</p></section>
+  <section class="gallery-page" aria-label="Design portfolio"><ProjectGrid projects={projects} /></section>
+</Layout>

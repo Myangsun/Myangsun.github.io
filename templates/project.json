@@ -1,0 +1,14 @@
+{
+  "title": "Project title",
+  "slug": "project-slug",
+  "category": "projects",
+  "summary": "A concise description of the project.",
+  "cover": "/assets/project-cover.jpg",
+  "researchQuestion": "What problem does the project investigate?",
+  "contribution": "What did you personally design, build, or evaluate?",
+  "method": "How did you approach the problem?",
+  "results": "What evidence, outcomes, and limitations did you find?",
+  "codeUrl": "",
+  "demoUrl": "",
+  "blocks": []
+}

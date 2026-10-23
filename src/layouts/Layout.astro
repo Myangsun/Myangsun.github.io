@@ -1,0 +1,55 @@
+---
+import '../styles/global.css';
+import '@fontsource-variable/space-grotesk';
+import { site, url } from '../lib/site';
+interface Props { title?: string; description?: string; active?: string; }
+const { title, description = site.description, active = 'Home' } = Astro.props;
+const pages = [['Home', ''], ['Projects', 'projects/'], ['Writing', 'writing/'], ['Design', 'design/']];
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title ? `${title} — ${site.name}` : site.name}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href={url('assets/logo.gif')} type="image/gif" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href={url()} aria-label="Mingyang Sun — Home">
+        <img src={url('assets/logo.gif')} alt="" width="48" height="48" />
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        {pages.map(([name, path], index) => <a href={url(path)} aria-current={active === name ? 'page' : undefined}><span class="nav-index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><span>{name}</span></a>)}
+      </nav>
+      <div class="header-contact">
+        <a href={site.linkedin} aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8H2v14h3V8Zm.2-4.5A1.7 1.7 0 1 0 1.8 3.5a1.7 1.7 0 0 0 3.4 0ZM22 14c0-4-2-6-5-6-2 0-3 1-4 2V8h-3v14h3v-8c0-2 1-3 3-3s3 1 3 3v8h3v-8Z" /></svg></a>
+        <a href={`mailto:${site.email}`} aria-label="Email Mingyang"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3V6Zm0 0 9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" /></svg></a>
+      </div>
+      <details class="mobile-menu">
+        <summary aria-label="Open navigation"><span></span><span></span></summary>
+        <nav aria-label="Mobile navigation">
+          {pages.map(([name, path], index) => <a href={url(path)} aria-current={active === name ? 'page' : undefined}><span class="nav-index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>{name}</a>)}
+          <a href={`${url()}#contact`}>Contact</a>
+        </nav>
+      </details>
+    </header>
+    <main id="main"><slot /></main>
+    <footer class="site-footer">
+      <span>{site.name}</span>
+      <div>
+        <a href={site.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href={site.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href={`mailto:${site.email}`}>Email</a>
+      </div>
+    </footer>
+    <script>
+      import '../scripts/interactions';
+      import '../scripts/pointer-effects';
+    </script>
+  </body>
+</html>

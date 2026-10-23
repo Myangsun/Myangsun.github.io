@@ -1,0 +1,56 @@
+---
+import { url } from '../lib/site';
+import '../styles/project-explorer.css';
+interface Project { title: string; slug: string; category: string; cover: string; summary: string; }
+interface Props { projects: Project[]; }
+const { projects } = Astro.props;
+const topics: Record<string, string> = {
+  'urban-fusion': 'Agents / spatial reasoning',
+  'multimodal-inferface': 'Multimodal AI',
+  '404-housing-not-found': 'Data visualization',
+  'recitygen': 'Generative design',
+  'urban-echoes': 'Visual similarity',
+  'cognitive-landscapes': 'VR / EEG',
+};
+const first = projects[0];
+---
+{first && <div class="project-presentation" data-project-explorer>
+  <div class="project-explorer">
+    <div class="project-stage" data-project-stage>
+      <div class="project-stage-top" aria-hidden="true">
+        <span><span data-preview-index>01</span><span class="stage-count"> / {String(projects.length).padStart(2, '0')}</span></span>
+        <span data-preview-topic>{topics[first.slug] ?? 'Research & experiments'}</span>
+      </div>
+      <button class="project-visual" data-project-visual type="button" aria-label="Make a wave in the project artwork" disabled>
+        <img class="project-preview-fallback" data-preview-image src={url(first.cover)} alt="" width="1000" height="667" decoding="async" />
+        <span class="scene-hint" aria-hidden="true">Click to play <span>↗</span></span>
+      </button>
+      <div class="project-stage-info">
+        <h3><a data-preview-link href={url(`${first.category}/${first.slug}/`)} aria-label={`Open ${first.title}`}><span data-preview-title>{first.title}</span><span aria-hidden="true">↗</span></a></h3>
+        <p data-preview-summary>{first.summary}</p>
+      </div>
+    </div>
+    <ol class="project-rows" aria-label="Selected research projects" role="list">
+      {projects.map((project, index) => <li>
+        <a class:list={['project-row', {'is-active': index === 0}]}
+          href={url(`${project.category}/${project.slug}/`)}
+          aria-label={`View ${project.title}`}
+          data-project-row data-index={index} data-title={project.title}
+          data-summary={project.summary} data-cover={url(project.cover)} data-topic={topics[project.slug] ?? 'Research & experiments'}>
+          <span class="project-row-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+          <span class="project-row-body">
+            <span class="project-row-title">{project.title}</span>
+            <span class="project-row-topic">{topics[project.slug] ?? 'Research & experiments'}</span>
+          </span>
+          <span class="project-row-arrow" aria-hidden="true">↗</span>
+        </a>
+        <button type="button" class="project-preview-action" data-preview-project={index} aria-label={`Preview ${project.title}`} aria-pressed={index === 0 ? 'true' : 'false'} hidden>{String(index + 1).padStart(2, '0')}</button>
+      </li>)}
+    </ol>
+  </div>
+  <p class="project-instruction" data-project-instruction hidden>Hover to preview · Click a title to explore</p>
+  <p class="project-announcement" role="status" aria-live="polite" data-project-announcement></p>
+</div>}
+<script>
+  import '../scripts/selected-projects';
+</script>

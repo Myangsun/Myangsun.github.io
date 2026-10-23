@@ -1,0 +1,10 @@
+---
+import ProjectDetail from '../../components/ProjectDetail.astro';
+import portfolio from '../../data/portfolio.json';
+export function getStaticPaths() {
+  const projects = portfolio.filter(item => item.category === 'design');
+  return projects.map((project, index) => ({ params: { slug: project.slug }, props: { project, next: projects[(index + 1) % projects.length] } }));
+}
+const { project, next } = Astro.props;
+---
+<ProjectDetail project={project} next={next} />

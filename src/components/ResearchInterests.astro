@@ -1,0 +1,40 @@
+---
+import { site } from '../lib/site';
+---
+<section class="research-interests" aria-labelledby="interests-title">
+  <div class="section-heading">
+    <h2 id="interests-title">Areas of interest <span class="item-count">({String(site.researchInterests.length).padStart(2, '0')})</span></h2>
+  </div>
+  <ol class="interest-list" role="list">
+    {site.researchInterests.map((interest, index) => <li>
+      <span class="interest-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+      <div>
+        <h3>{interest.title}</h3>
+        <p>{interest.description}</p>
+      </div>
+    </li>)}
+  </ol>
+</section>
+
+<style>
+  .research-interests { margin-top: 96px; }
+  .interest-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px 32px; margin: 0; padding: 0; list-style: none; }
+  .interest-list li { min-width: 0; }
+  .interest-number { display: block; margin-bottom: 18px; color: var(--accent); font-size: .6875rem; font-variant-numeric: tabular-nums; }
+  .interest-list h3 { max-width: 24ch; font-size: var(--card-title-size); line-height: 1.4; letter-spacing: -.025em; text-wrap: balance; }
+  .interest-list p { margin-top: 12px; font-size: .875rem; line-height: 1.7; color: var(--muted); }
+
+  @media (max-width: 1024px) {
+    .interest-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+  }
+
+  @media (max-width: 640px) {
+    .research-interests { margin-top: 65px; }
+    .interest-list { grid-template-columns: 1fr; gap: 0; }
+    .interest-list li { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 16px; padding-block: 22px; border-bottom: 1px solid var(--rule); }
+    .interest-list li:first-child { padding-top: 0; }
+    .interest-number { margin: 3px 0 0; }
+    .interest-list h3 { max-width: none; font-size: var(--card-title-size); }
+    .interest-list p { margin-top: 8px; }
+  }
+</style>
