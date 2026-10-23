@@ -2,9 +2,10 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 
 const base = (process.env.BASE_PATH || '/').replace(/\/?$/, '/');
+const site = (process.env.SITE_URL || 'https://www.myangsun.com').replace(/^http:/, 'https:');
 
 export default defineConfig({
-  site: process.env.SITE_URL || 'https://www.myangsun.com',
+  site,
   base,
   trailingSlash: 'always',
   redirects: Object.fromEntries(Object.entries({
